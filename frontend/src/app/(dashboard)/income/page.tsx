@@ -306,7 +306,7 @@ export default function IncomePage() {
                         {isRecurring && (
                             <div className="space-y-2">
                                 <Label htmlFor="frequency">Frequency</Label>
-                                <Select onValueChange={(v) => setValue('recurringFrequency', v)} defaultValue={editingIncome?.recurringFrequency}>
+                                <Select onValueChange={(v: string) => setValue('recurringFrequency', v)} defaultValue={editingIncome?.recurringFrequency}>
                                     <SelectTrigger>
                                         <SelectValue placeholder="Select frequency" />
                                     </SelectTrigger>

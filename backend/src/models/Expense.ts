@@ -66,8 +66,8 @@ const expenseSchema = new Schema<IExpense>(
         timestamps: true,
         toJSON: {
             transform: (_doc, ret) => {
-                delete ret.__v;
-                return ret;
+                const { __v, ...rest } = ret;
+                return rest;
             },
         },
     }

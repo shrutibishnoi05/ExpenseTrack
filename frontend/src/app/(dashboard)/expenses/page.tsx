@@ -183,7 +183,7 @@ export default function ExpensesPage() {
                         </div>
                         <Select
                             value={filters.category || 'all'}
-                            onValueChange={(value) => setFilters({ ...filters, category: value === 'all' ? undefined : value, page: 1 })}
+                            onValueChange={(value: string) => setFilters({ ...filters, category: value === 'all' ? undefined : value, page: 1 })}
                         >
                             <SelectTrigger className="w-[180px]">
                                 <SelectValue placeholder="All Categories" />
@@ -316,7 +316,7 @@ export default function ExpensesPage() {
 
                         <div className="space-y-2">
                             <Label htmlFor="category">Category</Label>
-                            <Select onValueChange={(value) => setValue('category', value)} defaultValue={editingExpense?.category._id}>
+                            <Select onValueChange={(value: string) => setValue('category', value)} defaultValue={editingExpense?.category._id}>
                                 <SelectTrigger>
                                     <SelectValue placeholder="Select category" />
                                 </SelectTrigger>
@@ -346,7 +346,7 @@ export default function ExpensesPage() {
 
                         <div className="space-y-2">
                             <Label htmlFor="paymentMethod">Payment Method</Label>
-                            <Select onValueChange={(value) => setValue('paymentMethod', value)} defaultValue={editingExpense?.paymentMethod || 'cash'}>
+                            <Select onValueChange={(value: string) => setValue('paymentMethod', value)} defaultValue={editingExpense?.paymentMethod || 'cash'}>
                                 <SelectTrigger>
                                     <SelectValue placeholder="Select payment method" />
                                 </SelectTrigger>

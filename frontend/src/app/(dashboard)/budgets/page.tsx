@@ -242,7 +242,7 @@ export default function BudgetsPage() {
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-2">
                                 <Label htmlFor="month">Month</Label>
-                                <Select onValueChange={(v) => setValue('month', v)} defaultValue={(currentDate.getMonth() + 1).toString()}>
+                                <Select onValueChange={(v: string) => setValue('month', v)} defaultValue={(currentDate.getMonth() + 1).toString()}>
                                     <SelectTrigger>
                                         <SelectValue />
                                     </SelectTrigger>
@@ -257,7 +257,7 @@ export default function BudgetsPage() {
                             </div>
                             <div className="space-y-2">
                                 <Label htmlFor="year">Year</Label>
-                                <Select onValueChange={(v) => setValue('year', v)} defaultValue={currentDate.getFullYear().toString()}>
+                                <Select onValueChange={(v: string) => setValue('year', v)} defaultValue={currentDate.getFullYear().toString()}>
                                     <SelectTrigger>
                                         <SelectValue />
                                     </SelectTrigger>
