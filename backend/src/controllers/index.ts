@@ -1,0 +1,9 @@
+export * as authController from './auth.controller';
+export * as userController from './user.controller';
+export * as expenseController from './expense.controller';
+export * as categoryController from './category.controller';
+export * as incomeController from './income.controller';
+export * as budgetController from './budget.controller';
+export * as analyticsController from './analytics.controller';
+export * as adminController from './admin.controller';
+export * as exportController from './export.controller';
